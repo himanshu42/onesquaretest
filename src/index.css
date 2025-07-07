@@ -1,68 +1,193 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./assets/Fonts/Sarcolenta 3.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: 'dinpro';
+  src: url('./assets/Fonts/Gotham-Book.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body {
-  margin: 0;
+body{
+  margin: 0px;
+  background-color: #000000;
+}
+
+.header{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.mainibanner{
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.titlediv{
+  /* margin-left: 20%;
+  margin-right: 20%; */
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.bodytitle{
+  color: #ba8d2c;
+  margin: 0px;
+  font-size: 3.5rem;
+  font-family: 'MyCustomFont', serif;
+  font-weight: 100;
+}
+
+.line{
+  width: 50%;
+  height: 2px;
+  background-color: #a37104;
+}
+
+.titlepara{
+  max-width: 500px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  color: #868584;
+  line-height: 1.6;
+  margin-top: 14px;
+}
+
+.formtitle{
+  font-family: 'MyCustomFont', serif;
+  color: #afaeae;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.formtitle h1{
+  margin: 0px;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.forminput{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+.forminput p{
+  color: #afaeae;
+  font-family: 'dinpro', serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.forminput input{
+  width: 100%;
+  background-color: #000000;
+  border: 3px solid #cda43f;
+  height: 50px;
+  color: #afaeae;
+  font-family: 'dinpro', serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.formbutton{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formbutton button{
+  background-color: #d7ae45;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: 'dinpro', serif;
+}
+
+.formterms{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #afaeae;
+  font-family: 'dinpro', serif;
+  font-weight: 100;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.formterms p{
+  margin: 0px;
+}
+
+.yttitle{
+  color: #afaeae;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'MyCustomFont', serif;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.gallery-container {
+  background-color: black;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.gallery-image {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Left image */
+.gallery-image.left {
+  left: -3%;
+  z-index: 1;
+  transform: scale(0.95);
+}
+
+/* Right image */
+.gallery-image.right {
+  right: -3%;
+  z-index: 1;
+  transform: scale(0.95);
+}
+
+/* Center image */
+.gallery-image.center {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.1);
 }
