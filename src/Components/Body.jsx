@@ -3,6 +3,10 @@ import mainibanner from '../assets/Desktop/mainbanner.png'
 import Form from './Form'
 import YoutubePreview from './YoutubePreview'
 import ImageGalary from './ImageGalary'
+import Map from './Map'
+import nmlogo from '../assets/logo and rera/nmlogo.png'
+import Distances from './Distances'
+import Footer from './Footer'
 
 const Body = () => {
     return (
@@ -18,7 +22,7 @@ const Body = () => {
                         <h1 className='bodytitle'>takes</h1>
                         <div className='line'></div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                    <div className='tabtitlediv'>
                         <h1 className='bodytitle'>residence</h1>
                         <p className='titlepara'>
                             Royal living is reimagined as Astoria Royals, a luxurious project of
@@ -42,7 +46,7 @@ const Body = () => {
                         <h1 className='bodytitle'>lineup</h1>
                         <div className='line'></div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                    <div className='tabtitlediv'>
                         <h1 className='bodytitle'>of luxuries</h1>
                         <p className='titlepara'>
                             Luxury isn't a label at Astoria Royals, it is a full-blown experience. From indulgent leisure spaces and wellness facilities to top-tier entertainment, every amenity is designed to surpass expectations.
@@ -63,15 +67,32 @@ const Body = () => {
                         <h1 className='bodytitle'>elevated</h1>
                         <div className='line'></div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                    <div className='tabtitlediv'>
                         <h1 className='bodytitle'>living</h1>
                         <p className='titlepara'>
                             Ravet is where Pune's future is unfolding.
-Tucked between the Pune-Mumbai Expressway and the Katraj-Dehu Bypass, this rapidly developing suburban neighbourhood connects you to wherever you want to be without the usual hassle. It owes its incredible connectivity to the old and new Mumbai highways, the Aundh-Ravet BRTS road, and Akurdi Railway Station. Top schools, business hubs, entertainment enclaves, healthcare facilities and other essentials are all within close proximity. This isn't just a convenient location, but a smart one.
+                            Tucked between the Pune-Mumbai Expressway and the Katraj-Dehu Bypass, this rapidly developing suburban neighbourhood connects you to wherever you want to be without the usual hassle. It owes its incredible connectivity to the old and new Mumbai highways, the Aundh-Ravet BRTS road, and Akurdi Railway Station. Top schools, business hubs, entertainment enclaves, healthcare facilities and other essentials are all within close proximity. This isn't just a convenient location, but a smart one.
                         </p>
                     </div>
                 </div>
             </div>
+            <Map />
+            <div className='titlediv'>
+                <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 50 }}>
+                        <h1 className='bodytitle'>From the trusted</h1>
+                        <div className='line' style={{ width: '30%' }}></div>
+                    </div>
+                    <div className='tabtitlediv'>
+                        <img src={nmlogo} />
+                        <p className='titlepara'>
+                            Nirman Greens is a dynamic force in Pune's
+                            real estate sector with 30+ years of expertise. With 15 million square feet delivered and even more in the pipeline, every project they undertake is a testament to masterful craftsmanship and a relentless pursuit for excellence. Driven by innovation and an eye for detail, they remain steadfast in their commitment to conceiving spaces that adapt to nature and evolve with time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <Distances />
         </div>
     )
 }
